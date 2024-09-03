@@ -1,8 +1,8 @@
 class Agchat < Formula
     desc "A command-line interface for Agora Chat"
     homepage "https://github.com/ycj3/agora-chat-cli"
-    url "https://github.com/ycj3/agora-chat-cli/archive/refs/tags/v0.1.0.tar.gz"
-    sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    url "https://github.com/ycj3/agora-chat-cli/archive/v0.2.0.tar.gz"
+    sha256 "f9fd22b8065dd5e141028271863962583e6e50726d74a99e542045bb3f7fd57b"
     license "MIT"
   
     depends_on "go" => :build
