@@ -12,7 +12,11 @@ class Agchat < Formula
     end
 
     def install
-      bin.install "agchat"
+      if Hardware::CPU.arm?
+        bin.install "bin/agchat-#{version}-macos-arm64" => "agchat"
+      elsif Hardware::CPU.intel?
+        bin.install "bin/agchat-#{version}-macos-amd64" => "agchat"
+      end
     end
     test do
       assert_match version.to_s, shell_output("#{bin}/agchat --version")
