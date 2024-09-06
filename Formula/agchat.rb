@@ -5,17 +5,17 @@ class Agchat < Formula
 
     if Hardware::CPU.arm?
       url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.3.3/agchat-0.3.3-macos-arm64.tar.gz"
-      sha256 "c3284e951476d51d94d3ae8ab6da2aa3ec6c2f8370b1b4357cb8c5f43f305337"
+      sha256 "5101937ba4088bf63fb56529e38d6dd8aba3851f3c79cd4b6772c0ca75e01bee"
     elsif Hardware::CPU.intel?
       url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.3.3/agchat-0.3.3-macos-amd64.tar.gz"
-      sha256 "b8ce0f23b668331319b50afdbb88bf8c4684c86168b3237ff43bd76a93e899ac"
+      sha256 "24b131d454442d93fdfabf2db0479a3a15d8291406556244bebfaaff607f1c8d"
     end
 
     def install
       if Hardware::CPU.arm?
-      bin.install "bin/agchat-0.3.3-macos-arm64" => "agchat"
+        bin.install "agchat-0.3.3-macos-arm64" => "agchat"
       elsif Hardware::CPU.intel?
-      bin.install "bin/agchat-0.3.3-macos-amd64" => "agchat"
+        bin.install "agchat-0.3.3-macos-amd64" => "agchat"
       end
     end
     test do
