@@ -1,21 +1,21 @@
 class Agchat < Formula
     desc "A command-line interface for Agora Chat"
     homepage "https://github.com/ycj3/agora-chat-cli"
-    version "0.5.0"
+    version "0.5.1"
 
     if Hardware::CPU.arm?
-      url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.5.0/agchat-0.5.0-macos-arm64.tar.gz"
-      sha256 "ff69d600ecc8b6ca11e9a5f90bf63c6d59be8775628739c1613247507608a460"
+      url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.5.1/agchat-0.5.1-macos-arm64.tar.gz"
+      sha256 "132ac5909ad3e4bcad41262c1ac2cc01c6e7438be38ae97222f187cc0f207371"
     elsif Hardware::CPU.intel?
-      url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.5.0/agchat-0.5.0-macos-amd64.tar.gz"
-      sha256 "f8f8f831bdae27696480241506b409434e02d7d5132636ec33b9fed0d7613a9a"
+      url "https://github.com/ycj3/agora-chat-cli/releases/download/v0.5.1/agchat-0.5.1-macos-amd64.tar.gz"
+      sha256 "b1a782c2bc777eb0a4ba7e0a7c9415e8febdf4e41fe1d6d7fbad12c2e78765ec"
     end
 
     def install
       if Hardware::CPU.arm?
-        bin.install "agchat-0.5.0-macos-arm64" => "agchat"
+        bin.install "agchat-0.5.1-macos-arm64" => "agchat"
       elsif Hardware::CPU.intel?
-        bin.install "agchat-0.5.0-macos-amd64" => "agchat"
+        bin.install "agchat-0.5.1-macos-amd64" => "agchat"
       end
     end
     test do
